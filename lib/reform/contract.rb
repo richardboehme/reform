@@ -19,7 +19,7 @@ module Reform
         options[:twin] = twin
       end
 
-      if validates_options = options[:validates]
+      if validates_options = options.delete(:validates)
         validates name, validates_options
       end
 
